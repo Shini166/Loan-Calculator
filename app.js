@@ -1,4 +1,3 @@
-// Listen for submit
 const clearBtn=document.querySelector('.clear-tasks');
 clearBtn.addEventListener('click',clearTasks);
 
@@ -25,9 +24,7 @@ function clearTasks()
    localStorage.clear();}
 }
 
-// Calculate Results
 function calculateResults(){
-  // UI Vars
   const amount = document.getElementById('amount');
   const interest = document.getElementById('interest');
   const years = document.getElementById('Years');
@@ -39,7 +36,7 @@ function calculateResults(){
   const calculatedInterest = parseFloat(interest.value) / 100 / 12;
   const calculatedPayments = parseFloat(years.value) * 12;
 
-  // Compute monthly payment
+  // Computing monthly payment
   const x = Math.pow(1 + calculatedInterest, calculatedPayments);
   const monthly = (principal*x*calculatedInterest)/(x-1);
 
