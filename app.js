@@ -52,6 +52,8 @@ function calculateResults(){
 }
   
 function showError(error){
+  document.getElementById('results').style.display='none';
+  document.getElementById('loading').style.display='none';
   // Creating a div
   const errorDiv = document.createElement('div');
   // Get elements
